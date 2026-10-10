@@ -226,3 +226,127 @@
     cursor: pointer;
 
 }
+
+
+/* Mobile Responsive */
+@media screen and (max-width: 768px) {
+    .scrollComponent {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .createPostContainer {
+        width: 100%;
+        height: auto;
+        min-height: 75px;
+        box-sizing: border-box;
+        padding: 0.7rem;
+        gap: 0.5rem;
+    }
+
+    .userProfile {
+        width: 42px;
+        height: 42px;
+        min-width: 42px;
+        padding: 0;
+        object-fit: cover;
+    }
+
+    .textareaOfContent {
+        flex: 1;
+        min-width: 0;
+        height: 55px;
+        padding: 0.5rem;
+        box-sizing: border-box;
+    }
+
+    .feb {
+        flex-shrink: 0;
+    }
+
+    .feb > svg {
+        width: 24px;
+        height: 24px;
+    }
+
+    .uploadButton {
+        right: 0.5rem;
+        bottom: -45px;
+        padding: 0.5rem 0.9rem;
+    }
+
+    .wrapper {
+        width: 100%;
+        gap: 1rem;
+    }
+
+    .singleCard {
+        width: 100%;
+        box-sizing: border-box;
+        overflow: hidden;
+    }
+
+    .singleCard_postContainer {
+        gap: 0.7rem;
+        padding: 0.8rem;
+    }
+
+    .singleCard_postContainer > img {
+        width: 42px;
+        height: 42px;
+        flex-shrink: 0;
+        object-fit: cover;
+    }
+
+    .singleCard__image {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .singleCard__image > img {
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+        border-radius: 12px;
+    }
+
+    .optionsContainer {
+        gap: 0.5rem;
+        padding: 0.7rem 0.3rem;
+    }
+
+    .singleOption__optionsContainer {
+        gap: 0.3rem;
+        font-size: 0.85rem;
+    }
+
+    .commentsContainer {
+        padding: 0.5rem;
+        box-sizing: border-box;
+    }
+
+    .allCommentsContainer {
+        width: 100%;
+        max-width: 500px;
+        height: 80vh;
+        box-sizing: border-box;
+        padding: 1rem;
+    }
+
+    .postCommentContainer {
+        left: 0.7rem;
+        width: calc(100% - 1.4rem);
+        gap: 0.5rem;
+    }
+
+    .postCommentContainer > input {
+        min-width: 0;
+        flex: 1;
+        padding: 0.7rem;
+    }
+
+    .postCommentContainer_commentBtn {
+        flex: 0 0 auto;
+        padding: 0.6rem;
+    }
+}

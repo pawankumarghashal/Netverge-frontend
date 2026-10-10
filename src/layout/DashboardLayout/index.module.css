@@ -56,3 +56,49 @@
 
 }
 
+
+
+
+
+/* Mobile Responsive */
+@media screen and (max-width: 768px) {
+  .homeContainer {
+    gap: 0;
+    flex-direction: column;
+  }
+
+  .homeContainer__leftBar {
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    gap: 0.5rem;
+    width: 100%;
+    flex: none;
+    padding: 10px 0;
+    border-bottom: 1px solid rgb(222, 222, 222);
+  }
+
+  .SideBarOption {
+    width: auto;
+    max-width: 100%;
+    justify-content: center;
+    font-size: 0.75rem;
+    gap: 0.25rem;
+  }
+
+  .SideBarOption > svg {
+    height: 1.2rem;
+  }
+
+  .feedContainer {
+    width: 100%;
+    flex: none;
+    padding: 10px;
+    border-left: none;
+    box-sizing: border-box;
+  }
+
+  .extraContainer {
+    display: none;
+  }
+}

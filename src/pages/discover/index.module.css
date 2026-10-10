@@ -23,3 +23,41 @@
     width: 10%;
     border-radius: 50%;
 }
+
+
+
+
+/* Mobile Responsive */
+@media screen and (max-width: 768px) {
+    .allUserProfile {
+        max-width: 100%;
+        width: 100%;
+        box-sizing: border-box;
+        padding: 0 10px;
+        gap: 1rem;
+    }
+
+    .userCard {
+        width: 100%;
+        box-sizing: border-box;
+        gap: 0.8rem;
+        padding: 1rem;
+    }
+
+    .userCard_image {
+        width: 55px;
+        height: 55px;
+        min-width: 55px;
+        object-fit: cover;
+        border-radius: 50%;
+    }
+
+    .userCard h4 {
+        font-size: 0.95rem;
+        overflow-wrap: anywhere;
+    }
+
+    .userCard p {
+        overflow-wrap: anywhere;
+    }
+}
