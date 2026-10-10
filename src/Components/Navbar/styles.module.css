@@ -21,3 +21,44 @@
     font-weight: bold;
     cursor: pointer;
 }
+
+/* Mobile Responsive Navbar */
+@media screen and (max-width: 768px) {
+    .container {
+        padding: 0.8rem;
+    }
+
+    .navBar {
+        gap: 0.5rem;
+        flex-wrap: wrap;
+    }
+
+    .navBar h1 {
+        font-size: 1.4rem;
+    }
+
+    .navBarOptionContainer {
+        align-items: center;
+        gap: 0.5rem;
+    }
+
+    .navBarOptionContainer > div > div {
+        display: flex !important;
+        align-items: center;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+        gap: 0.6rem !important;
+    }
+
+    .navBarOptionContainer p {
+        font-size: 0.8rem;
+        margin: 0;
+        overflow-wrap: anywhere;
+    }
+
+    .buttonJoin {
+        padding: 0.5rem 0.8rem;
+        font-size: 0.75rem;
+        white-space: nowrap;
+    }
+}
