@@ -86,7 +86,16 @@ export default function ViewProfilePage({userProfile}){
       <DashboardLayout>
       <div className={styles.container}>
         <div className={styles.backDropContainer}>
-          <img className={styles.backDrop} src={`${BASE_URL}/${userProfile.userId.profilePicture}`} alt="backDrop" />
+          {/* <img className={styles.backDrop} src={`${BASE_URL}/${userProfile.userId.profilePicture}`} alt="backDrop" /> */}
+          <img
+  className={styles.backDrop}
+  src={
+    userProfile.userId?.profilePicture?.startsWith("http")
+      ? userProfile.userId.profilePicture
+      : `${BASE_URL}/${userProfile.userId?.profilePicture}`
+  }
+  alt="backDrop"
+/>
         </div>
         <div className={styles.profileContainer_details}>
         <div style={{display:"flex" , gap:"0.7rem"}}>
@@ -145,7 +154,19 @@ style={{cursor:"pointer"}}>
                 <div key={post._id} className={styles.postCard}>
                   <div className={styles.card}>
                     <div className={styles.card__profileContainer}>
-                      {post.media !== "" ? <img src={`${BASE_URL}/${post.media}`} alt="" /> : <div style={{width:"3.4rem",height:"3.4rem"}}></div>}
+                      {/* {post.media !== "" ? <img src={`${BASE_URL}/${post.media}`} alt="" /> : <div style={{width:"3.4rem",height:"3.4rem"}}></div>} */}
+                      {post.media !== "" ? (
+  <img
+    src={
+      post.media?.startsWith("http")
+        ? post.media
+        : `${BASE_URL}/${post.media}`
+    }
+    alt=""
+  />
+) : (
+  <div style={{ width: "3.4rem", height: "3.4rem" }}></div>
+)}
                     </div>
                     <p>{post.body}</p>
                   </div>

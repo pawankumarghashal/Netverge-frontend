@@ -67,7 +67,16 @@ const handleUpload = async () =>{
             <div className={styles.wrapper}>
          <div className={styles.scrollComponent}>
              <div  className={styles.createPostContainer}  >
-                <img  className={styles.userProfile}    src={`${BASE_URL}/${authState.user.userId?.profilePicture}`} alt="proflePicture"  />
+                {/* <img  className={styles.userProfile}    src={`${BASE_URL}/${authState.user.userId?.profilePicture}`} alt="proflePicture"  /> */}
+                <img
+  className={styles.userProfile}
+  src={
+    authState.user.userId?.profilePicture?.startsWith("http")
+      ? authState.user.userId.profilePicture
+      : `${BASE_URL}/${authState.user.userId?.profilePicture}`
+  }
+  alt="profilePicture"
+/>
                <textarea onChange={(e)=>setPostContent(e.target.value)} value={postContent} placeholder={"What's in your mind?"}  className={styles.textareaOfContent} name="" id=""></textarea>
 
 <label htmlFor="fileUpload">
@@ -107,7 +116,16 @@ const handleUpload = async () =>{
                                          <div    key={post._id} className={styles.singleCard}>
                                           <div className={styles.singleCard_postContainer}> 
 
-                                            <img className={styles.userProfile} src={`${BASE_URL}/${post.userId.profilePicture} `} />
+                                            {/* <img className={styles.userProfile} src={`${BASE_URL}/${post.userId.profilePicture} `} /> */}
+                                            <img
+  className={styles.userProfile}
+  src={
+    post.userId?.profilePicture?.startsWith("http")
+      ? post.userId.profilePicture
+      : `${BASE_URL}/${post.userId?.profilePicture}`
+  }
+  alt="profilePicture"
+/>
                                           <div>
 
                                              <div style={{display:"flex",gap:"1.2rem",justifyContent:"space-between"}}>
@@ -134,7 +152,14 @@ const handleUpload = async () =>{
                                             
                                             <div className={styles.singleCard__image}>
 
-                                              <img src={`${BASE_URL}/${post.media}`}  />
+                                              {/* <img src={`${BASE_URL}/${post.media}`}  /> */}
+                                              <img
+  src={
+    post.media?.startsWith("http")
+      ? post.media
+      : `${BASE_URL}/${post.media}`
+  }
+/>
                                             </div>
                                           
 
