@@ -1,16 +1,12 @@
-import React from 'react'
-import DashboardLayout from '@/layout/DashboardLayout'
-import UserLayout from '@/layout/UserLayout'
+import React, { useEffect } from 'react';
+import { useRouter } from 'next/router';
 
-export default function scroll() {
-  return (
-        <UserLayout>
-    
-          <DashboardLayout>
-          <div>
-            <h2>scroll</h2>
-          </div>
-          </DashboardLayout>
-          </UserLayout>
-  )
+export default function Scroll() {
+const router = useRouter();
+
+useEffect(() => {
+router.replace('/dashboard');
+}, [router]);
+
+return <p>Loading...</p>;
 }
