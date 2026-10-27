@@ -5,8 +5,11 @@ export default function Scroll() {
 const router = useRouter();
 
 useEffect(() => {
+if (router.isReady) {
 router.replace('/dashboard');
-}, [router]);
-
-return <p>Loading...</p>;
 }
+}, [router.isReady, router]);
+
+return <p>Loading Home...</p>;
+}
+
